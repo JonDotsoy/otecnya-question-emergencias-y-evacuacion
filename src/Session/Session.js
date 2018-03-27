@@ -143,7 +143,7 @@ const RenderSesssion = ({logged, handleLogout, tmp_location_valid: tmpLocationVa
       </ContainerBody>
     </ContainerSession>
     : <ContainerSession>
-      <HeaderTitle>Base</HeaderTitle>
+      <HeaderTitle>Emergencias y Evacuación</HeaderTitle>
       <ContainerBody>
         <form name='credentials' onSubmit={disableSubmitForm}>
           <ContainerFieldElement>
