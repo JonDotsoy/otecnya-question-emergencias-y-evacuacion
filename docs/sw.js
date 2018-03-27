@@ -76,15 +76,15 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 var url = __webpack_require__(1);
 
-var versionCache = "question" + '-' + "2.0.2" + '-6';
-var filesOnCache = ['/' + "otecnya-questions-offline" + '/', '/' + "otecnya-questions-offline" + '/app.js'];
+var versionCache = "question-base" + '-' + "2.0.2" + '-6';
+var filesOnCache = ['/' + "otecnya-question-emergencias-y-evacuacion" + '/', '/' + "otecnya-question-emergencias-y-evacuacion" + '/app.js'];
 
 self.addEventListener('activate', function (event) {
   var cacheWhitelist = [versionCache];
 
   event.waitUntil(_asyncToGenerator(function* () {
     var cacheNames = (yield caches.keys()).filter(function (cacheName) {
-      return cacheName.indexOf('' + "question") === 0 || cacheName.indexOf('files') === 0;
+      return cacheName.indexOf('' + "question-base") === 0 || cacheName.indexOf('files') === 0;
     });
 
     yield Promise.all(cacheNames.map(function () {
@@ -101,7 +101,7 @@ self.addEventListener('activate', function (event) {
   })());
 });
 
-if (false) {
+if (true) {
   self.skipWaiting();
 }
 
